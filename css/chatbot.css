@@ -1,0 +1,22 @@
+/* Asistente de dudas e inscripción. Usa los colores de styles.css. */
+.cb { --cb-gap: 16px; }
+.cb-fab { position: fixed; z-index: 40; right: max(var(--cb-gap), env(safe-area-inset-right, 0px)); bottom: calc(var(--cb-gap) + env(safe-area-inset-bottom, 0px)); background: var(--bone); color: var(--ink); border: 1px solid var(--bone); padding: 14px 22px; font-family: var(--display); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.cb-fab:hover { background: var(--ink); color: var(--bone); }
+.cb-panel { position: fixed; z-index: 41; right: max(var(--cb-gap), env(safe-area-inset-right, 0px)); bottom: calc(var(--cb-gap) + env(safe-area-inset-bottom, 0px)); width: min(390px, calc(100vw - 2 * var(--cb-gap))); height: min(580px, 78vh); height: min(580px, 78dvh); display: flex; flex-direction: column; background: var(--coal); border: 1px solid var(--bone); }
+.cb-head { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); font-family: var(--display); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.cb-x { background: none; border: 0; font-size: 1.6rem; line-height: 1; padding: 2px 8px; color: var(--bone); }
+.cb-log { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.cb-msg { max-width: 90%; padding: 10px 13px; font-size: 0.92rem; line-height: 1.5; border: 1px solid var(--line); overflow-wrap: anywhere; }
+.cb-msg.bot { align-self: flex-start; background: var(--ink); }
+.cb-msg.me { align-self: flex-end; background: var(--bone); color: var(--ink); border-color: var(--bone); }
+.cb-note { color: var(--ash); font-size: 0.8rem; }
+.cb-chips { flex: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px; }
+.cb-chips:not(:empty) { padding-bottom: 10px; }
+.cb-chip { background: none; border: 1px solid var(--line); padding: 6px 12px; font-size: 0.84rem; color: var(--bone); }
+.cb-chip:hover { border-color: var(--bone); background: rgba(236, 234, 229, 0.06); }
+.cb-form { flex: none; display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--line); }
+.cb-form input { flex: 1; min-width: 0; background: var(--ink); border: 1px solid var(--line); padding: 10px 12px; border-radius: 0; font-size: 1rem; }
+.cb-form input:focus-visible { border-color: var(--bone); outline-offset: 0; }
+@media (max-width: 480px) {
+  .cb-panel { height: min(78vh, 560px); height: min(78dvh, 560px); }
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HR GYM</title>
+<meta name="description" content="HR GYM: planes White, Grey y Black, sedes, portal del socio y portal del empleado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Lora:ital,wght@1,400;1,500&family=Syncopate:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+<!-- ===================== INICIO ===================== -->
+<div id="v-home">
+  <div class="nav-bar" id="navBar">
+    <div class="wrap nav">
+      <ul>
+        <li><a href="#nosotros" data-scroll="nosotros">Nosotros</a></li>
+        <li><a href="#servicios" data-scroll="servicios">Servicios</a></li>
+        <li><a href="#sedes" data-scroll="sedes">Gimnasios</a></li>
+        <li><a href="#planes" data-scroll="planes">Planes</a></li>
+        <li><a href="#preguntas" data-scroll="preguntas">Preguntas</a></li>
+      </ul>
+      <div class="acts">
+        <button class="btn" type="button" data-act="auth" data-mode="login">Iniciar sesión</button>
+        <button class="btn" type="button" data-act="auth" data-mode="crear">Crear cuenta</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="inicio">
+    <div class="wrap hero-body">
+      <svg class="hero-art" viewBox="0 0 560 360" role="img" aria-label="Mancuerna hexagonal de 40 sobre piso de hule">
+        <defs>
+          <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9b3a7"/><stop offset="0.5" stop-color="#6d685f"/><stop offset="1" stop-color="#3b3833"/></linearGradient>
+          <linearGradient id="head" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a3a37"/><stop offset="1" stop-color="#171716"/></linearGradient>
+          <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter>
+        </defs>
+        <g filter="url(#soft)" opacity="0.75" fill="#000">
+          <polygon points="70,230 190,200 250,300 150,350 60,320"/><polygon points="330,250 420,215 505,290 440,350 350,335"/><rect x="200" y="260" width="170" height="26" transform="rotate(-8 200 260)"/>
+        </g>
+        <rect x="205" y="132" width="170" height="26" fill="url(#bar)" transform="rotate(8 290 145)"/>
+        <g>
+          <polygon points="70,70 150,34 218,48 252,118 238,196 164,226 88,204 54,134" fill="url(#head)" stroke="#4a4a46" stroke-width="2"/>
+          <polygon points="88,84 150,56 204,68 230,122 218,184 164,206 104,190 78,134" fill="none" stroke="#2c2c2a" stroke-width="2"/>
+          <text x="146" y="138" fill="#55554f" font-family="Syncopate, Arial, sans-serif" font-weight="700" font-size="34" text-anchor="middle" transform="rotate(-18 146 138)">40</text>
+        </g>
+        <g>
+          <polygon points="326,92 404,62 476,84 508,160 488,238 412,268 342,246 310,170" fill="url(#head)" stroke="#4a4a46" stroke-width="2"/>
+          <polygon points="344,106 404,82 460,100 486,160 470,222 412,246 358,228 332,172" fill="none" stroke="#2c2c2a" stroke-width="2"/>
+          <text x="406" y="176" fill="#55554f" font-family="Syncopate, Arial, sans-serif" font-weight="700" font-size="34" text-anchor="middle" transform="rotate(-80 406 176)">40</text>
+        </g>
+      </svg>
+      <div class="hero-copy">
+        <h1><small>HR</small>GYM</h1>
+        <p class="lead">Vive la experiencia HR GYM y disfruta de un excelente entrenamiento al mejor precio.</p>
+        <div class="hero-cta">
+          <a class="btn solid" href="#planes" data-scroll="planes">Ver planes</a>
+          <a class="btn" href="#sedes" data-scroll="sedes">Encontrar mi sede</a>
+        </div>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#nosotros" data-scroll="nosotros">Desplaza ↓</a>
+  </header>
+
+  <section class="band" id="nosotros">
+    <div class="wrap">
+      <div class="about">
+        <div class="sec-head" style="margin:0">
+          <span class="eyebrow">Nosotros</span>
+          <h2 class="h2">Entrenar bien no tiene que costar de más</h2>
+        </div>
+        <div class="body">
+          <p class="lead" style="margin-bottom:20px; color:var(--bone)">Un gimnasio sencillo, limpio y con todo lo necesario.</p>
+          <p>En HR GYM reunimos lo que importa para entrenar: <strong>máquinas, peso libre, regaderas y agua</strong>, en espacios amplios y con precios claros por mes.</p>
+          <p>Cada socio tiene su <strong>credencial con código de barras</strong> y un portal en internet donde consulta su plan, reserva salones y recibe una dieta y una rutina hechas para su objetivo.</p>
+        </div>
+      </div>
+      <div class="facts">
+        <div><b>4</b><span>sedes en la ciudad</span></div>
+        <div><b>3</b><span>planes: White, Grey y Black</span></div>
+        <div><b>5:30</b><span>abrimos desde las 5:30 de la mañana</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="servicios">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Servicios</span><h2 class="h2">Lo que encuentras en cada sede</h2></div>
+      <ul class="svc" id="svcList"></ul>
+    </div>
+  </section>
+
+  <section class="band" id="sedes">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Gimnasios</span><h2 class="h2">Sedes de gyms</h2></div>
+      <div class="sedes" id="sedeList"></div>
+      <p class="note-small">Direcciones y horarios de ejemplo.</p>
+    </div>
+  </section>
+
+  <section class="band alt" id="planes">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Planes</span><h2 class="h2">Elige tu plan, pagas por mes</h2><p class="muted">Toca un plan para crear tu cuenta con ese plan ya seleccionado.</p></div>
+      <div class="plans" id="planList"></div>
+    </div>
+  </section>
+
+  <section class="band" id="preguntas">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">Preguntas</span><h2 class="h2">Antes de inscribirte</h2></div>
+      <div class="faq">
+        <details open><summary>¿Cómo recibo mi número de socio?</summary><p>Al terminar tu pago te enviamos un correo con tu número de socio. Con ese número y tu contraseña entras al portal.</p></details>
+        <details><summary>¿Cómo entro al gimnasio?</summary><p>En el portal tienes tu código de barras. Lo escaneas en el lector de la entrada. Recepción puede liberar tu acceso si hay algún problema.</p></details>
+        <details><summary>¿Puedo cambiar de plan?</summary><p>Sí. Desde la pestaña Mi cuenta cambias de plan cuando quieras. El nuevo precio aplica en tu siguiente pago.</p></details>
+        <details><summary>¿Qué incluye la dieta y rutina personalizada?</summary><p>Es un servicio extra. Respondes una encuesta con tu objetivo y tu nivel, y recibes un plan de alimentación y una rutina de ejercicios.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>HR GYM · Sitio de demostración</span>
+      <svg class="mark" viewBox="0 0 40 60" role="img" aria-label="Logotipo HR GYM" fill="none" stroke="#b46a55" stroke-width="1.6">
+        <path d="M3 58V24C3 11 10.5 2 20 2s17 9 17 22v34z"/><path d="M22 14a6 6 0 1 0 4 10 5 5 0 0 1-4-10z" fill="#b46a55" stroke="none"/><path d="M9 38q5.5-4 11 0t11 0M9 45q5.5-4 11 0t11 0M9 52q5.5-4 11 0t11 0"/>
+      </svg>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== OTRAS VISTAS ===================== -->
+<div id="v-auth" hidden></div>
+<div id="v-student" hidden></div>
+<div id="v-staff" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* Kiosko: reutiliza los componentes de styles.css y agranda todo para pantalla táctil. */
+.kiosk-body { -webkit-tap-highlight-color: transparent; }
+.kiosk { min-height: 100vh; min-height: 100dvh; font-size: 1.1rem; display: flex; flex-direction: column; }
+.kiosk .topbar .wrap { min-height: 76px; }
+.kiosk .logo { font-size: 1.15rem; padding: 10px 0; }
+.kiosk .who { font-size: 1rem; gap: 18px; }
+
+/* Controles grandes para el dedo */
+.kiosk .btn { min-height: 58px; padding: 14px 30px; font-size: 1.1rem; }
+.kiosk .btn.sm { min-height: 48px; padding: 10px 20px; font-size: 1rem; }
+.kiosk .field > label, .kiosk .field > span { font-size: 0.82rem; }
+.kiosk .field input, .kiosk .field select { padding: 16px 16px; font-size: 1.15rem; }
+.kiosk .alert { font-size: 1rem; }
+.kiosk .stepper { font-size: 0.95rem; }
+.kiosk .stepper div { padding: 12px 8px; }
+
+/* Inicio: dos opciones grandes */
+.k-home { flex: 1; display: grid; align-content: center; gap: clamp(24px, 5vw, 48px); padding-block: clamp(32px, 6vw, 64px); }
+.k-welcome { display: grid; gap: 12px; text-align: center; }
+.k-welcome .h2 { font-size: clamp(1.4rem, 4vw, 2.4rem); }
+.k-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 3vw, 32px); }
+.k-tile { min-height: min(52vh, 420px); display: grid; align-content: space-between; gap: 18px; text-align: left; padding: clamp(24px, 4vw, 48px); border: 1px solid var(--bone); background: var(--coal); transition: background 0.2s, color 0.2s; min-width: 0; }
+.k-tile:hover, .k-tile:active { background: var(--bone); color: var(--ink); }
+.k-tile .k-t { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 4.4vw, 2.8rem); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.1; }
+.k-tile .k-d { font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 2vw, 1.5rem); line-height: 1.45; max-width: 18em; }
+.k-tile .k-go { font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* Pantallas internas */
+.k-page { flex: 1; display: grid; gap: clamp(20px, 3vw, 32px); align-content: start; padding-block: clamp(24px, 4vw, 48px) clamp(32px, 5vw, 56px); }
+.k-head { display: grid; gap: 10px; }
+.k-head .h2 { font-size: clamp(1.3rem, 3.4vw, 2rem); }
+.k-form { max-width: 820px; width: 100%; }
+.k-form h3 { font-size: 0.95rem; }
+.k-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.k-actions .btn { flex: 1 1 200px; }
+.k-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.k-link { background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: 4px; font-size: inherit; }
+.k-foot { color: var(--ash); font-size: 0.85rem; padding-top: 8px; }
+.kiosk .plan-card { min-height: 100%; }
+.kiosk .plan-card .pick { font-size: 1rem; padding-top: 18px; }
+.kiosk .list li { padding-block: 14px; font-size: 1.05rem; }
+
+/* Pestañas grandes de la cuenta */
+.k-tabs { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--line); max-width: 820px; }
+.k-tabs button { background: none; border: 0; padding: 18px 12px; min-height: 64px; color: var(--ash); font-size: 1.05rem; letter-spacing: 0.03em; }
+.k-tabs button + button { border-left: 1px solid var(--line); }
+.k-tabs button[aria-selected="true"] { background: var(--bone); color: var(--ink); }
+
+@media (max-width: 720px) {
+  .k-tiles { grid-template-columns: minmax(0, 1fr); }
+  .k-tile { min-height: 220px; }
+  .k-tabs { grid-auto-flow: row; }
+  .k-tabs button + button { border-left: 0; border-top: 1px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) { .k-tile { transition: none; } }
